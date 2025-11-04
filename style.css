@@ -1,0 +1,58 @@
+/* ✅ style.css (SEPARADO Y RESPONSIVE) */
+
+
+.section.active {
+display: block;
+}
+
+
+.about-container {
+display: flex;
+gap: 20px;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+
+.about-img {
+width: 220px;
+height: auto;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+@media (max-width: 768px) {
+.about-container {
+flex-direction: column;
+text-align: center;
+}
+
+
+.about-img {
+width: 70%;
+max-width: 260px;
+margin: 0 auto 20px auto;
+}
+}
+
+
+@media (max-width: 480px) {
+.about-img {
+width: 90%;
+}
+}
+
+
+#music-toggle {
+position: fixed;
+bottom: 20px;
+right: 20px;
+font-size: 1.6rem;
+background: rgba(0, 0, 0, 0.6);
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 50%;
+cursor: pointer;
+}

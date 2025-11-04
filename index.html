@@ -1,0 +1,65 @@
+<!-- ✅ index.html (SEPARADO, TESTEADO, RESPONSIVE) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Star Gazer en Concierto</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<audio id="music" src="Good Girls (Don t Get Used).m4a" autoplay loop></audio>
+
+
+<div class="app">
+<header class="app-header">
+<h1>⭐ Star Gazer en Concierto ⭐</h1>
+</header>
+
+
+<nav class="bottom-nav">
+<button data-target="home">🏠</button>
+<button data-target="dates">📅</button>
+<button data-target="tickets">🎟️</button>
+<button data-target="about">⭐</button>
+</nav>
+
+
+<section id="home" class="section active">
+<h2>Bienvenidos</h2>
+<p>Explora el universo musical de Star Gazer y descubre fechas, tickets y más.</p>
+</section>
+
+
+<section id="dates" class="section">
+<h2>Fechas del Tour</h2>
+<p>Aquí irán las fechas del tour.</p>
+</section>
+
+
+<section id="tickets" class="section">
+<h2>Compra de Tickets</h2>
+<p>Selecciona tu fecha y consigue tus entradas.</p>
+</section>
+
+
+<section id="about" class="section">
+<h2>Sobre Star Gazer</h2>
+<div class="about-container">
+<img src="stargazer.png" alt="Star Gazer" class="about-img">
+<p>
+Star Gazer es una artista de indie pop que transforma su amor por las estrellas y la astronomía en canciones íntimas, etéreas y llenas de sensibilidad. Desde sus primeras grabaciones caseras, su universo sonoro ha conectado con miles de oyentes que ella llama su “constelación”.<br><br>
+Con melodías suaves, letras emocionales y un estilo visual inspirado en el cosmos, Star Gazer crea música para quienes buscan luz en medio de la noche. Siempre cercana a sus fans, comparte con ellos cada etapa de su viaje, agradeciendo ser parte de su órbita creativa.<br><br>
+En constante expansión, Star Gazer sigue construyendo un mundo propio donde el cielo, la emoción y el indie pop brillan juntos.
+</p>
+</div>
+</section>
+
+
+<button id="music-toggle">🎵</button>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
