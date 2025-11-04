@@ -1,65 +1,87 @@
-<!-- ✅ index.html (SEPARADO, TESTEADO, RESPONSIVE) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Star Gazer en Concierto</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Gazer en Concierto</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<audio id="music" src="Good Girls (Don t Get Used).m4a" autoplay loop></audio>
+  <audio id="music" src="Good Girls (Don t Get Used).m4a" autoplay loop></audio>
+
+  <div class="app">
+    <header class="app-header">
+      <h1>⭐ Star Gazer en Concierto ⭐</h1>
+    </header>
 
 
-<div class="app">
-<header class="app-header">
-<h1>⭐ Star Gazer en Concierto ⭐</h1>
-</header>
+    <nav class="bottom-nav">
+      <button data-target="home">🏠</button>
+      <button data-target="dates">📅</button>
+      <button data-target="tickets">🎟️</button>
+      <button data-target="about">⭐</button>
+    </nav>
 
+    <main id="main-content">
+      <section id="home" class="page active">
+        <h2>Bienvenidos</h2>
+        <p>Explora el universo musical de Star Gazer y descubre fechas, tickets y más 🌌</p>
+      </section>
 
-<nav class="bottom-nav">
-<button data-target="home">🏠</button>
-<button data-target="dates">📅</button>
-<button data-target="tickets">🎟️</button>
-<button data-target="about">⭐</button>
-</nav>
+      <section id="dates" class="page">
+        <h2>Fechas del Tour</h2>
+        <ul class="dates-list">
+          <li>05/11 - París, Francia</li>
+          <li>07/11 - Lisboa, Portugal</li>
+          <li>09/11 - Madrid, España</li>
+          <li>12/11 - Lyon, Francia</li>
+          <li>14/11 - Edimburgo, Reino Unido</li>
+          <li>16/11 - Liverpool, Reino Unido</li>
+          <li>19/11 - Cardiff, Reino Unido</li>
+          <li>21/11 - Londres, Reino Unido</li>
+          <li>23/11 - Dublín, Irlanda</li>
+          <li>26/11 - Ámsterdam, Holanda</li>
+          <li>28/11 - Milán, Italia</li>
+          <li>30/11 - Múnich, Alemania</li>
+          <li>03/12 - Múnich, Alemania</li>
+          <li>05/12 - Gelsenkirchen, Alemania</li>
+        </ul>
+      </section>
 
+      <section id="tickets" class="page">
+        <h2>Compra tus Entradas</h2>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria">
+          <option value="general">General - $15</option>
+          <option value="vip">VIP - $45</option>
+          <option value="meet">Meet & Greet - $93</option>
+        </select>
 
-<section id="home" class="section active">
-<h2>Bienvenidos</h2>
-<p>Explora el universo musical de Star Gazer y descubre fechas, tickets y más.</p>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" max="10" value="1" />
+
+        <button id="comprar">Comprar</button>
+
+        <div id="mensaje"></div>
+      </section>
+
+      <section id="about" class="page">
+        <h2>Sobre Star Gazer</h2>
+  <p>
+    Star Gazer es una artista de indie pop que transforma su amor por las estrellas y la astronomía en canciones íntimas, etéreas y llenas de sensibilidad. Desde sus primeras grabaciones caseras, su universo sonoro ha conectado con miles de oyentes que ella llama su “constelación”.
+  </p>
+  <p>
+    Con melodías suaves, letras emocionales y un estilo visual inspirado en el cosmos, Star Gazer crea música para quienes buscan luz en medio de la noche. Siempre cercana a sus fans, comparte con ellos cada etapa de su viaje, agradeciendo ser parte de su órbita creativa.
+  </p>
+  <p>
+    En constante expansión, Star Gazer sigue construyendo un mundo propio donde el cielo, la emoción y el indie pop brillan juntos.
+  </p>
 </section>
+    </main>
 
+    <button id="music-toggle">🎵</button>
+  </div>
 
-<section id="dates" class="section">
-<h2>Fechas del Tour</h2>
-<p>Aquí irán las fechas del tour.</p>
-</section>
-
-
-<section id="tickets" class="section">
-<h2>Compra de Tickets</h2>
-<p>Selecciona tu fecha y consigue tus entradas.</p>
-</section>
-
-
-<section id="about" class="section">
-<h2>Sobre Star Gazer</h2>
-<div class="about-container">
-<img src="stargazer.png" alt="Star Gazer" class="about-img">
-<p>
-Star Gazer es una artista de indie pop que transforma su amor por las estrellas y la astronomía en canciones íntimas, etéreas y llenas de sensibilidad. Desde sus primeras grabaciones caseras, su universo sonoro ha conectado con miles de oyentes que ella llama su “constelación”.<br><br>
-Con melodías suaves, letras emocionales y un estilo visual inspirado en el cosmos, Star Gazer crea música para quienes buscan luz en medio de la noche. Siempre cercana a sus fans, comparte con ellos cada etapa de su viaje, agradeciendo ser parte de su órbita creativa.<br><br>
-En constante expansión, Star Gazer sigue construyendo un mundo propio donde el cielo, la emoción y el indie pop brillan juntos.
-</p>
-</div>
-</section>
-
-
-<button id="music-toggle">🎵</button>
-</div>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

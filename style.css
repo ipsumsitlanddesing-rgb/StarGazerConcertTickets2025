@@ -1,18 +1,37 @@
-/* ✅ style.css (SEPARADO Y RESPONSIVE) */
-
-
-.section.active {
-display: block;
+body {
+  background-image: url('PENDOOOON.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll; /* ❌ evita el desenfoque del modo fixed */
+  image-rendering: crisp-edges;  /* 🔹 mejora nitidez */
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-
-.about-container {
-display: flex;
-gap: 20px;
-align-items: flex-start;
-justify-content: flex-start;
+#about {
+  color: #fff;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
+#about h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e7286b;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
 .about-img {
 width: 220px;
@@ -21,13 +40,11 @@ border-radius: 12px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-
 @media (max-width: 768px) {
 .about-container {
 flex-direction: column;
 text-align: center;
 }
-
 
 .about-img {
 width: 70%;
@@ -36,23 +53,110 @@ margin: 0 auto 20px auto;
 }
 }
 
-
 @media (max-width: 480px) {
 .about-img {
 width: 90%;
 }
 }
 
+.app {
+  backdrop-filter: blur(6px) brightness(0.7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.page {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.page.active {
+  display: block;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#comprar {
+  background: #000000;
+  color: #e7286b;
+}
+
+#comprar:hover {
+  background: #464646;
+  color: #fff;
+}
+
+.bottom-nav {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-bottom: 1px solid #444;
+  backdrop-filter: blur(8px);
+}
+
+.bottom-nav button {
+  background: none;
+  color: #fff;
+  font-size: 22px;
+}
 
 #music-toggle {
-position: fixed;
-bottom: 20px;
-right: 20px;
-font-size: 1.6rem;
-background: rgba(0, 0, 0, 0.6);
-color: white;
-border: none;
-padding: 10px 15px;
-border-radius: 50%;
-cursor: pointer;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #e7286b;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+  box-shadow: 0 0 15px #e7286b;
+}
+
+.star {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle 1.2s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw * (random() - 0.5)), calc(100vh * (random() - 0.5))) scale(0);
+    opacity: 0;
+  }
+}
+
+#mensaje {
+  margin-top: 20px;
+  font-weight: bold;
 }
