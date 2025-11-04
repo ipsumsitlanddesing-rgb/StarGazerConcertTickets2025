@@ -3,60 +3,12 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: scroll; /* ❌ evita el desenfoque del modo fixed */
-  image-rendering: crisp-edges;  /* 🔹 mejora nitidez */
+  background-attachment: scroll; /* ❌ evita el desenfoque de 'fixed' */
+  image-rendering: crisp-edges; /* 🔹 mejora nitidez */
   background-color: #000;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-#about {
-  color: #fff;
-  padding: 20px;
-  line-height: 1.7;
-  font-size: 1rem;
-  text-align: justify;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
-  margin: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-#about h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #e7286b;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.about-img {
-width: 220px;
-height: auto;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-@media (max-width: 768px) {
-.about-container {
-flex-direction: column;
-text-align: center;
-}
-
-.about-img {
-width: 70%;
-max-width: 260px;
-margin: 0 auto 20px auto;
-}
-}
-
-@media (max-width: 480px) {
-.about-img {
-width: 90%;
-}
 }
 
 .app {
@@ -104,14 +56,16 @@ button {
 
 .bottom-nav {
   position: relative;
+  top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-around;
-  padding: 12px 0;
-  border-bottom: 1px solid #444;
-  backdrop-filter: blur(8px);
+  padding: 10px 0;
+  border-bottom: 1px solid #555;
+  backdrop-filter: blur(8px); /* 🔹 efecto moderno translúcido */
 }
+
 
 .bottom-nav button {
   background: none;
@@ -130,6 +84,28 @@ button {
   height: 55px;
   font-size: 20px;
   box-shadow: 0 0 15px #e7286b;
+}
+
+#about {
+  color: #fff;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #e7286b;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .star {
